@@ -32,6 +32,10 @@ header, main, footer {
     margin: 0 auto;
     width: 100%;
 }
+
+p {
+    font-size: 1.05em;
+}
 header {
     display: flex;
     align-items: center;
@@ -67,11 +71,18 @@ main {
 }
 
 section {
-    gap: 24px;
+    gap: 48px;
 }
 
 .nameContainer {
     gap: 8px;
+}
+
+.statsContainer {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .imgContainer {
@@ -85,4 +96,98 @@ section {
     aspect-ratio: 1/1;
     object-fit: cover;
     
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.stats>div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stats div i {
+    font-size: 1.4em;
+}
+
+
+/* this makes the numbers all start 
+at the same spot save trick for later */
+
+.stats div div {
+display: grid;
+place-items: center;
+min-width: 40px;
+}
+
+.aboutMe {
+    line-height: 1.5em;
+}
+
+
+.outreach {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: auto;
+}
+
+/* ^ button was to big and was catching on
+hover in the middle of the page so added 
+to shrink it to size of text
+
+width: fit-content;
+margin-right: auto; */
+
+
+.outreach:hover {
+    opacity: 0.7;
+}
+
+/* rotate arrow icon for "email me" */
+.outreach i {
+    transform: rotate(-45deg);
+}
+
+
+.ProjectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.headerText {
+    margin-bottom: 24px;
+}
+
+.projectItem {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+}
+
+
+
+
+@media (min-width: 640px) {
+
+
+    .statsContainer{
+        flex-direction: row;
+    }
+    .stats{
+        gap: 0px ;
+        }
+        /* keeps paragraph tighter  */
+    .aboutMe {
+        width: 80%;
+        margin: auto;
+    }
 }
